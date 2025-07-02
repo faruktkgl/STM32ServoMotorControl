@@ -72,6 +72,11 @@ Note: Be sure to connect the GND of the STM32 and the servo motors together to h
 
 - The system clock is configured to run at **72 MHz**, providing stable operation for PWM generation and serial communication.
 ![image](https://github.com/user-attachments/assets/d9d73a2c-e362-42d3-b541-dd2760e1f8bb)
+**Note:** Standard servo motors typically operate at a fixed PWM frequency of 50 Hz.
+Therefore, the prescaler and auto-reload register (ARR) values in the timer configuration must be chosen such that:
+![download](https://github.com/user-attachments/assets/0e3682f0-4191-4e07-9c39-eb6225ef12c7)
+Make sure your timer settings satisfy this condition to ensure proper servo operation.
+
 
 
 ### Python (GUI) (panTiltControlPanel.py)
