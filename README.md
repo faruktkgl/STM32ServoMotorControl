@@ -13,6 +13,11 @@ This project controls a pan-tilt mechanism using **two servo motors** driven by 
 - 1x **Personal Computer**
 - **Connecting cables**
 ## System Architecture
+-The servo motors are powered by a 6V 4Ah battery. Serial communication with the PC is established via an FTDI USB-to-Serial adapter.
+-The camera feed is streamed using a Logitech Brio 500 webcam.
+-Servo motor control is handled by the STM32 microcontroller.
+
+Note: Be sure to connect the GND of the STM32 and the servo motors together to have a common ground reference.
 ![schema](https://github.com/user-attachments/assets/86e5ada0-e938-468c-acbc-101e327746f3)
 ## Software Details
 
@@ -33,30 +38,30 @@ This project controls a pan-tilt mechanism using **two servo motors** driven by 
 ![image](https://github.com/user-attachments/assets/d0643ebf-f0db-40d8-843f-f8f16934f38a)
 
 
-Under the SYS configuration in STM32CubeIDE, Serial Wire (SWD) is selected as the debug interface to enable programming and debugging using ST-Link.
+-Under the SYS configuration in STM32CubeIDE, Serial Wire (SWD) is selected as the debug interface to enable programming and debugging using ST-Link.
 
 ![image](https://github.com/user-attachments/assets/48e6746e-8d1b-4fdf-8d5e-c5efa6d8d4be)
 
 
-TIM2 is configured to generate a PWM signal on Channel 4 (PA3) for controlling the pan servo.
+-TIM2 is configured to generate a PWM signal on Channel 4 (PA3) for controlling the pan servo.
 
 **Prescaler is set to 144 - 1**
 **Auto-reload register (ARR) is set to 10000 - 1**
-This results in a PWM frequency of approximately 50 Hz, which is suitable for standard servo motors.
+-This results in a PWM frequency of approximately 50 Hz, which is suitable for standard servo motors.
 
 ![image](https://github.com/user-attachments/assets/7078c58f-fe01-40fe-abe4-4e21668f0ce1)
 
-TIM3 is configured to generate a PWM signal on Channel 1 (PA6) for controlling the tilt servo.
+-TIM3 is configured to generate a PWM signal on Channel 1 (PA6) for controlling the tilt servo.
 
 **Prescaler is set to 144 - 1**
 **Auto-reload register (ARR) is set to 10000 - 1**
 ![image](https://github.com/user-attachments/assets/b5d7e06d-e51f-469d-bc75-8d8bdc56f9df)
 
 
-USART1 is configured for asynchronous serial communication at a baud rate of 115200.
-Communication with the STM32 is established via an **FTDI USB-to-Serial** adapter connected to pins **PA9 (TX)** and **PA10 (RX)**.
+-USART1 is configured for asynchronous serial communication at a baud rate of 115200.
+-Communication with the STM32 is established via an **FTDI USB-to-Serial** adapter connected to pins **PA9 (TX)** and **PA10 (RX)**.
 
-The microcontroller receives simple character commands (w, a, s, d) from a Python GUI running on the PC.
+-The microcontroller receives simple character commands (w, a, s, d) from a Python GUI running on the PC.
 
 ![image](https://github.com/user-attachments/assets/a26474ff-ef6d-4986-83af-d90b1ddc7ef9)
 
