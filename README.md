@@ -74,7 +74,7 @@ Note: Be sure to connect the GND of the STM32 and the servo motors together to h
 ![image](https://github.com/user-attachments/assets/d9d73a2c-e362-42d3-b541-dd2760e1f8bb)
 
 
-### Python (GUI)
+### Python (GUI) (panTiltControlPanel.py)
 A custom Python-based GUI was developed using Tkinter, enabling real-time control of the pan-tilt servo system and live camera feed preview.
 
 Features:
