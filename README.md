@@ -12,7 +12,7 @@ This project controls a pan-tilt mechanism using **two servo motors** driven by 
 - 1x **6V 4Ah Battery**
 - 1x **Personal Computer**
 - **Connecting cables**
-## ⚙️ System Architecture
+## System Architecture
 ![schema](https://github.com/user-attachments/assets/86e5ada0-e938-468c-acbc-101e327746f3)
 ## Software Details
 
