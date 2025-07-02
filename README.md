@@ -13,9 +13,9 @@ This project controls a pan-tilt mechanism using **two servo motors** driven by 
 - 1x **Personal Computer**
 - **Connecting cables**
 ## System Architecture
--The servo motors are powered by a 6V 4Ah battery. Serial communication with the PC is established via an FTDI USB-to-Serial adapter.
--The camera feed is streamed using a Logitech Brio 500 webcam.
--Servo motor control is handled by the STM32 microcontroller.
+- The servo motors are powered by a 6V 4Ah battery. Serial communication with the PC is established via an FTDI USB-to-Serial adapter.
+- The camera feed is streamed using a Logitech Brio 500 webcam.
+- Servo motor control is handled by the STM32 microcontroller.
 
 Note: Be sure to connect the GND of the STM32 and the servo motors together to have a common ground reference.
 ![schema](https://github.com/user-attachments/assets/86e5ada0-e938-468c-acbc-101e327746f3)
@@ -23,9 +23,7 @@ Note: Be sure to connect the GND of the STM32 and the servo motors together to h
 
 ### STM32CubeIDE (Firmware)
 - PWM signals are generated using TIM2 and TIM3 timers.
-  
 - Servo motors are connected to pins `A3` and `A6`.
-  
 - UART is used to receive control characters (`w`, `a`, `s`, `d`) for movement.
 ### Configurations
 - PA9 is configured as USART1_TX, and PA10 as USART1_RX for serial communication with the PC.
