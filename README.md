@@ -84,7 +84,7 @@ Features:
 
 - Keyboard arrow keys (↑, ↓, ←, →)
 
-- Serial communication with STM32 via an FTDI USB-to-Serial adapter (default: COM6, 115200 baud)
+- Serial communication with STM32 via an FTDI USB-to-Serial adapter
 
 - Live camera feed preview using OpenCV and a Logitech Brio 500 webcam
 
@@ -92,3 +92,12 @@ Features:
 
 - Safe resource handling: camera and serial ports are properly released on exit
 ![WhatsApp Image 2025-07-02 at 16 42 05_8927cbc9](https://github.com/user-attachments/assets/731f83e0-68a7-4f9c-b221-c1965218bb4a)
+
+
+### DEMO
+In this video, the pan-tilt system is demonstrated operating on both axes (pan and tilt) in real time.
+
+**Watch the demo here:**
+
+https://github.com/user-attachments/assets/e1fdca08-9025-4a76-aee9-194ef1e43575
+
