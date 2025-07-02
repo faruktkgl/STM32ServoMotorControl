@@ -27,7 +27,7 @@ Note: Be sure to connect the GND of the STM32 and the servo motors together to h
 - PWM signals are generated using TIM2 and TIM3 timers.
 - Servo motors are connected to pins `A3` and `A6`.
 - UART is used to receive control characters (`w`, `a`, `s`, `d`) for movement.
-### Configurations
+### Configurations (PanTiltControlSTM32.ioc)
 - PA9 is configured as USART1_TX, and PA10 as USART1_RX for serial communication with the PC.
 - PA3 is used as TIM2_CH4 to control the pan servo motor via PWM.
 - PA6 is used as TIM3_CH1 to control the tilt servo motor via PWM.
