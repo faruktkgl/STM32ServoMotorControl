@@ -53,8 +53,8 @@ Note: Be sure to connect the GND of the STM32 and the servo motors together to h
 
 - TIM3 is configured to generate a PWM signal on Channel 1 (PA6) for controlling the tilt servo.
 
-**Prescaler is set to 144 - 1**
-**Auto-reload register (ARR) is set to 10000 - 1**
+- **Prescaler is set to 144 - 1**
+- **Auto-reload register (ARR) is set to 10000 - 1**
 ![image](https://github.com/user-attachments/assets/b5d7e06d-e51f-469d-bc75-8d8bdc56f9df)
 
 
