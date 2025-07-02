@@ -75,7 +75,20 @@ Note: Be sure to connect the GND of the STM32 and the servo motors together to h
 
 
 ### Python (GUI)
-- Developed using `tkinter` with 4-direction control buttons.
-- Keyboard arrow keys and GUI buttons send characters over serial to STM32.
-- Live webcam feed is displayed within the same GUI window.
-- Libraries used: `pyserial`, `opencv-python`, `Pillow`, `tkinter`
+A custom Python-based GUI was developed using Tkinter, enabling real-time control of the pan-tilt servo system and live camera feed preview.
+
+Features:
+- Directional control of two servo motors (pan & tilt) using both:
+
+- On-screen arrow buttons
+
+- Keyboard arrow keys (↑, ↓, ←, →)
+
+- Serial communication with STM32 via an FTDI USB-to-Serial adapter (default: COM6, 115200 baud)
+
+- Live camera feed preview using OpenCV and a Logitech Brio 500 webcam
+
+- Responsive interface with button feedback animations and status indicators
+
+- Safe resource handling: camera and serial ports are properly released on exit
+![WhatsApp Image 2025-07-02 at 16 42 05_8927cbc9](https://github.com/user-attachments/assets/731f83e0-68a7-4f9c-b221-c1965218bb4a)
