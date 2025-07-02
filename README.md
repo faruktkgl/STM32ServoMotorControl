@@ -97,7 +97,7 @@ Features:
 ### DEMO
 In this video, the pan-tilt system is demonstrated operating on both axes (pan and tilt) in real time.
 
-**Watch the demo here:**
+👇👇 **Watch the demo here:** 👇👇
 
 https://github.com/user-attachments/assets/e1fdca08-9025-4a76-aee9-194ef1e43575
 
