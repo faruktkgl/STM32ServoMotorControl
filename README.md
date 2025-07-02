@@ -14,9 +14,7 @@ This project controls a pan-tilt mechanism using **two servo motors** driven by 
 - **Connecting cables**
 ## System Architecture
 -The servo motors are powered by a 6V 4Ah battery. Serial communication with the PC is established via an FTDI USB-to-Serial adapter.
-
 -The camera feed is streamed using a Logitech Brio 500 webcam.
-
 -Servo motor control is handled by the STM32 microcontroller.
 
 Note: Be sure to connect the GND of the STM32 and the servo motors together to have a common ground reference.
